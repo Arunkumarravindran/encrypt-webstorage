@@ -1,0 +1,18 @@
+{
+  "name": "encrypt-webstorage",
+  "version": "0.0.4",
+  "peerDependencies": {
+    "@angular/common": "~8.2.14",
+    "@angular/core": "~8.2.14"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0",
+    "crypto-ts": "^1.0.2"
+  },
+  "description": "session storage with AES encryption using web storage service / internal AES encryption and decryption using encryption service",
+  "author":{
+    "name" : "Arun Kumar Ravindran",
+    "email": "arunkumarravindran@outlook.com"
+  },
+  "keywords": ["session storage", "encryption" , "AES"]
+}

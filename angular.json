@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "encrypt-webstorage": {
+      "projectType": "library",
+      "root": "projects/encrypt-webstorage",
+      "sourceRoot": "projects/encrypt-webstorage/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/encrypt-webstorage/tsconfig.lib.json",
+            "project": "projects/encrypt-webstorage/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/encrypt-webstorage/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/encrypt-webstorage/src/test.ts",
+            "tsConfig": "projects/encrypt-webstorage/tsconfig.spec.json",
+            "karmaConfig": "projects/encrypt-webstorage/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/encrypt-webstorage/tsconfig.lib.json",
+              "projects/encrypt-webstorage/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "encrypt-webstorage"
 }
